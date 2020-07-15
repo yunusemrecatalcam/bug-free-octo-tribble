@@ -16,7 +16,7 @@ class Twint:
         self.conn = db.Conn(config.Database)
         self.d = datelock.Set(self.config.Until, self.config.Since)
         verbose.Elastic(config.Elasticsearch)
-
+	print("shit")
         if self.config.Store_object:
             logme.debug(__name__+':Twint:__init__:clean_follow_list')
             output._clean_follow_list()
